@@ -70,6 +70,13 @@ else
 	sudo apt install nmap
 fi
 
+#install tree
+if dpkg -l | grep tree >/dev/null; then
+	echo "tree is already installed" | lolcat
+else
+	echo "Installing tree..." | lolcat
+	sudo apt install tree
+fi
 
 echo "######################################" 
 echo "    Basic Terminal Setup Complete     " | lolcat
