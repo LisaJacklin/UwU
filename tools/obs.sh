@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! command -v obs > /dev/null; then
+if dpkg -l obs > /dev/null; then
 	echo "OBS is already installed!"
 else
 	echo "Beginning OBS installation..."
