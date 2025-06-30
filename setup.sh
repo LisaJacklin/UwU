@@ -7,6 +7,22 @@
 ###################################
 
 #list of packages to install
-packages = (lolcat bash tmux telnet tree nmap netcat curl git vim htop wget ruby-full chruby asciinema)
+packages=(lolcat bash tmux tmuxinator telnet tree nmap curl git vim htop wget ruby-full asciinema)
 
 
+echo "##################################"
+echo " Let's get setup! "
+echo "##################################"
+
+for pkg in "${packages[@]}"; do
+  if dpkg -l "$pkg" 2>/dev/null | grep -q "^ii"; then
+  	echo "$pkg is already installed."
+  else
+	echo "$pkg is not installed. Installing..."
+	sudo apt-get install -y "$pkg"
+  fi
+done
+
+echo "##################################"
+echo "  Basic Terminal Setup Complete"
+echo "##################################"
