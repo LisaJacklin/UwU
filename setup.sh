@@ -26,3 +26,21 @@ done
 echo "##################################"
 echo "  Basic Terminal Setup Complete"
 echo "##################################"
+
+echo " Now for some fun packages!"
+
+fun=(cmatrix libaa-bin cowsay oneko espeak sl cargo)
+
+for f in "${fun[@]}"; do
+  if dpkg -l "$f" 2>/dev/null | grep -q "^ii"; then
+  	echo "$f is already installed." | lolcat
+  else
+	echo "$f is not installed. Installing..."
+	sudo apt-get install -y "$f" | lolcat
+  fi
+done
+
+echo "##################################"
+echo "  Now you fancy, Enjoy :3" | lolcat
+echo "##################################"
+
