@@ -2,12 +2,12 @@
 
 ###################################
 # Author: Lisa Jacklin
-# Last Updated: 2025-06-27
+# Last Updated: 2025-08-04
 # Purpose: provide quick, easy install for a brand new system
 ###################################
 
 #list of packages to install
-packages=(lolcat bash tmux tmuxinator telnet tree nmap curl git vim htop wget ruby-full asciinema)
+packages=(lolcat bash tmux tmuxinator telnet tree nmap curl git vim htop wget ruby-full asciinema npm python3-full)
 
 
 echo "##################################"
